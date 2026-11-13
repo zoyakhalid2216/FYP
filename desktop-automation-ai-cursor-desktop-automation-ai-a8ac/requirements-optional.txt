@@ -1,0 +1,3 @@
+# Optional. Chrome Web Speech is the default voice path.
+# PyAudio only needed for the local microphone fallback.
+PyAudio>=0.2.13

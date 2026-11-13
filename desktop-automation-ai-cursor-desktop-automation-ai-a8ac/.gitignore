@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# App data (local DB + captures)
+data/automation.db
+data/captures/*
+!data/captures/.gitkeep
+data/logs/*
+!data/logs/.gitkeep
+data/models/
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+
+# spaCy models (downloaded at setup)
+*.whl

@@ -1,0 +1,28 @@
+# Core packages — required for Automate AI to start on any PC
+PyQt5>=5.15.0
+opencv-python>=4.8.0
+pytesseract>=0.3.10
+Pillow>=10.0.0
+numpy>=1.24.0
+mss>=9.0.0
+pyautogui>=0.9.54
+pyperclip>=1.8.0
+SpeechRecognition>=3.10.0
+openai>=1.40.0
+google-genai>=0.3.0
+spacy>=3.7.0
+nltk>=3.8.0
+PyYAML>=6.0
+pytest>=7.4.0
+vosk>=0.3.44
+sounddevice>=0.4.6
+bcrypt>=4.1.0
+
+# Optional laptop-mic backend (Chrome voice works without this).
+# Installed separately by INSTALL_ON_YOUR_WINDOWS_PC.bat so a PyAudio
+# build failure cannot block the rest of the app.
+# PyAudio>=0.2.13
+
+# Optional Windows UI Automation for hybrid clicks (accessibility before OCR).
+# Soft-imported; the app still runs without it.
+# pywinauto>=0.6.8

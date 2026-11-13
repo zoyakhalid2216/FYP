@@ -1,0 +1,91 @@
+app:
+  name: "Automate AI"
+  product_name: "AI Desktop Automation"
+  group_id: "S26CS089"
+  version: "0.4.0-fyp"
+  tagline: "Your desktop. Your commands. Automated."
+
+paths:
+  data_dir: "data"
+  db_file: "data/automation.db"
+  captures_dir: "data/captures"
+  templates_dir: "assets/templates"
+  logs_dir: "data/logs"
+  models_dir: "data/models"
+
+ui:
+  theme: "light"
+  window_width: 1080
+  window_height: 680
+  min_width: 860
+  min_height: 560
+
+speech:
+  # AI overlay uses Chrome/Google Web Speech first; Vosk is fallback only
+  engine: auto
+  wake_word: "AI"
+  wake_aliases:
+    - "AI"
+    - "A I"
+    - "A.I."
+    - "a. i."
+    - "ai"
+    - "ay eye"
+    - "a eye"
+    - "hey AI"
+    - "hey A I"
+    - "okay AI"
+    - "ok AI"
+    - "hey I"
+    - "DAI"
+  overlay: true
+  ambient_seconds: 0.08
+  silence_seconds: 1.8
+  max_phrase_seconds: 30.0
+  start_timeout_seconds: 8.0
+  phrase_time_limit: 30.0
+  listen_timeout: 8.0
+  energy_threshold: 120
+  mic_sensitivity: 0.9
+  pause_threshold: 1.8
+  non_speaking_duration: 1.5
+  language: "en-US"
+  browser_timeout: 30
+  bridge_host: "127.0.0.1"
+  bridge_port: 8765
+  # auto | openai | gemini — used when OPENAI_API_KEY / GEMINI_API_KEY are set
+  cloud_stt: auto
+  openai_api_key: ""
+  gemini_api_key: ""
+
+nlp:
+  spacy_model: "en_core_web_sm"
+  min_confidence: 0.45
+  mode: local
+
+vision:
+  ocr_lang: "eng"
+  template_threshold: 0.72
+  capture_monitor: 0
+
+automation:
+  dry_run: false
+  failsafe: true
+  pause_seconds: 0.04
+  type_interval: 0.01
+  move_duration: 0.05
+  post_action_delay: 0.06
+  app_launch_wait: 0.45
+  max_actions: 30
+  max_seconds: 60
+  max_retries: 3
+  retry_delay: 0.45
+  verify_actions: true
+
+auth:
+  # Real accounts via Sign Up — no demo user is created by default
+  create_demo_user: false
+  default_username: ""
+  default_password: ""
+  default_email: ""
+  default_display_name: ""

@@ -1,0 +1,160 @@
+HOW TO PUT AUTOMATE AI ON YOUR WINDOWS DESKTOP
+==============================================
+
+What you saw earlier was the Cloud Agent remote Linux desktop — NOT this
+Windows PC. The app must be installed ONCE on your Windows computer.
+
+IF YOU ALREADY INSTALLED IT — UPDATE THE FILES
+----------------------------------------------
+The repo is PRIVATE. Double-click update cannot silently download
+GitHub files unless you are logged in.
+
+EASIEST (always works):
+1. Chrome → log into GitHub
+2. Open branch:
+   https://github.com/muneeb-267/desktop-automation-ai/tree/cursor/desktop-automation-ai-a8ac
+3. Green Code button → Download ZIP
+4. Extract to a NEW folder (do not overwrite while DAI is running)
+5. Open that new folder → double-click FIX_INSTALL.bat
+6. Then Run Automate AI.bat
+
+OR use the updater in your EXISTING folder:
+1. Close DAI first
+2. Open the project folder that contains main.py
+   (not a random copy of the .bat on the Desktop)
+3. Double-click UPDATE_ON_YOUR_WINDOWS_PC.bat
+4. A black window MUST stay open. If it does not, right-click
+   the .bat → Run as administrator, or run it from Command Prompt.
+5. If it asks you to download a ZIP: do the GitHub steps above,
+   wait until Downloads has the ZIP, then press Enter in that window.
+
+
+FASTEST WAY (ZIP download — first install)
+------------------------------------------
+The repo is PRIVATE. Anonymous ZIP links show 404. You must be logged
+into GitHub in the browser (or use GitHub Desktop).
+
+1. Open Chrome, log into GitHub, then go to:
+   https://github.com/muneeb-267/desktop-automation-ai
+
+2. Click the branch menu (says "main") and choose:
+   cursor/desktop-automation-ai-a8ac
+
+3. Click the green Code button → Download ZIP
+
+4. Extract the ZIP (right-click → Extract All…) to somewhere easy, e.g.:
+   Desktop\desktop-automation-ai
+
+5. Open that folder and DOUBLE-CLICK:
+   FIX_INSTALL.bat
+   (or INSTALL_ON_YOUR_WINDOWS_PC.bat on a new PC)
+
+To make friend PCs use the old one-click ZIP: GitHub → Settings →
+Change repository visibility → Public.
+
+6. When install finishes, if you do NOT see an icon, DOUBLE-CLICK:
+   CREATE_DESKTOP_ICON.bat
+
+7. You should see on Desktop:  Automate AI  or  Automate AI.bat
+   Press F5 on the Desktop if needed.
+
+8. Double-click it → Sign Up Now with YOUR username/password.
+
+
+IF THE ICON IS STILL MISSING
+----------------------------
+1. Open the extracted project folder in File Explorer
+2. Double-click:  Run Automate AI.bat
+   (this starts the app even without a Desktop icon)
+3. Then also double-click:  CREATE_DESKTOP_ICON.bat
+4. Press F5 on the Desktop
+
+
+USING GITHUB DESKTOP (you already have it)
+------------------------------------------
+1. Open GitHub Desktop
+2. File → Clone repository → URL:
+   https://github.com/muneeb-267/desktop-automation-ai.git
+3. After clone: Repository → Show in Explorer
+4. Checkout branch: cursor/desktop-automation-ai-a8ac
+5. Double-click INSTALL_ON_YOUR_WINDOWS_PC.bat
+6. If no icon: double-click CREATE_DESKTOP_ICON.bat
+
+
+NEED PYTHON?
+------------
+If the installer says Python is missing:
+1. https://www.python.org/downloads/
+2. Tick "Add python.exe to PATH"
+3. Install, then run INSTALL_ON_YOUR_WINDOWS_PC.bat again
+
+
+OPTIONAL (better OCR on Windows)
+--------------------------------
+Install Tesseract OCR:
+https://github.com/UB-Mannheim/tesseract/wiki
+
+
+DAI LISTENER (Google/Chrome mic)
+--------------------------------
+After login a small DAI pill sits on the desktop, and a tiny “DAI Google Mic”
+Chrome window stays open (allow the microphone if Chrome asks).
+
+1. DAI starts ASLEEP. It ignores commands until you say:  DAI wakeup
+2. After wakeup it STAYS LISTENING (task session). Speak the next step:
+     Open chrome
+     Go to horizon.ucp.edu.pk
+     Click Login with Microsoft
+     Click the email field
+     Type my email
+3. DAI looks at the CURRENT screen each time. It does not reuse old clicks.
+4. High-confidence clicks run immediately. Uncertain matches ask:
+     Do you mean this?  [YES] [NO]
+   The overlay highlights the element.
+5. Say  done  /  finish  /  DAI sleep  when the task is finished.
+   Emergency: tap STOP on the pill, or say  DAI stop  /  cancel task.
+6. If it only hears part of what you said, the pill asks for the rest.
+   Partial speech never clicks.
+
+If Google mic cannot start, DAI falls back to the slower offline mic — install
+Chrome for the listening that actually works.
+
+If the pill is hidden: Voice Command → Show DAI window
+Windows: allow microphone for Chrome and for Python / Automate AI.
+
+AI AGENT (FYP demo)
+-------------------
+Sidebar → AI Agent: type a goal → Explain plan → Execute.
+The plan shows confidence, steps, and screen boxes after vision runs.
+Emergency stop: Ctrl+Shift+Esc or the red STOP button.
+Passwords use bcrypt (salted). Settings: Local vs Enhanced, retries, max actions.
+
+
+LOGIN
+-----
+There is NO demo account.
+Use Sign Up Now with your own email/username and password.
+
+
+FRIEND'S PC / INSTALL ERRORS (yaml, PyAudio)
+--------------------------------------------
+If the black window shows:
+  Failed to build PyAudio
+  ModuleNotFoundError: No module named 'yaml'
+  and steps [4/5] [5/5]   ← that is the OLD installer
+
+Do this on the friend's PC (no new ZIP needed):
+
+A) In the SAME folder they already extracted, double-click:
+     FIX_INSTALL.bat
+
+   You MUST see "Automate AI repair (v0.1.9)" and "OK: yaml and PyQt5".
+
+B) If FIX_INSTALL.bat is not in that folder, they still have the old ZIP.
+   Open Command Prompt in that folder and paste:
+
+     .venv\Scripts\python.exe -m pip install PyYAML PyQt5 Pillow numpy pyautogui pyperclip SpeechRecognition nltk pytest opencv-python pytesseract mss openai google-genai spacy
+
+   Then double-click:  Run Automate AI.bat
+
+PyAudio / Visual C++ errors can be ignored. Voice uses Chrome.

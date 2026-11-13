@@ -1,0 +1,28 @@
+# Python Virtual Environments
+.venv/
+venv/
+env/
+*/.venv/
+*/venv/
+*/env/
+
+# Python Cache & Bytecode
+__pycache__/
+*/__pycache__/
+*.py[cod]
+*$py.class
+
+# Testing and coverage
+.pytest_cache/
+*/.pytest_cache/
+.mypy_cache/
+*/.mypy_cache/
+.coverage
+htmlcov/
+
+# Operating System & IDE
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
